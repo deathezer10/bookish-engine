@@ -4,6 +4,3 @@
 Vec2D::Vec2D() {
 }
 
-
-Vec2D::~Vec2D() {
-}

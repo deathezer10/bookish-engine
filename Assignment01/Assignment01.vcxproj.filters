@@ -19,11 +19,11 @@
     <Filter Include="Source Files\Item">
       <UniqueIdentifier>{4426fca0-f365-47ad-ae02-2acde23d32b1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\NPC">
-      <UniqueIdentifier>{b0784449-2641-4005-b4ba-e7c02dc2d382}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\NPC">
+    <Filter Include="Source Files\Monster">
       <UniqueIdentifier>{dc066e83-3c87-4239-b9cb-7c8a1d9fc16b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Monster">
+      <UniqueIdentifier>{b0784449-2641-4005-b4ba-e7c02dc2d382}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -43,7 +43,7 @@
       <Filter>Header Files\Item</Filter>
     </ClInclude>
     <ClInclude Include="Dweller.h">
-      <Filter>Header Files\NPC</Filter>
+      <Filter>Header Files\Monster</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -63,7 +63,7 @@
       <Filter>Source Files\Item</Filter>
     </ClCompile>
     <ClCompile Include="Dweller.cpp">
-      <Filter>Source Files\NPC</Filter>
+      <Filter>Source Files\Monster</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
