@@ -20,8 +20,8 @@ public:
 	const int getCurrentRadDamage();
 	const int getAttackDmg();
 
-	void setPosition(const Vec2D&);
 	const Vec2D getPosition();
+	void setPosition(const Vec2D&);
 
 	void receiveHealthDamage(const int&);
 	void receiveRadDamage(const int&);
