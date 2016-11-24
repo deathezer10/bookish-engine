@@ -10,7 +10,7 @@ class GameObject {
 public:
 	~GameObject();
 	string getName();
-	int getCount();
+	static int getCount();
 
 protected:
 	GameObject(const string&);
@@ -18,7 +18,7 @@ protected:
 
 
 private:
-	int count;
+	static int count;
 
 };
 
