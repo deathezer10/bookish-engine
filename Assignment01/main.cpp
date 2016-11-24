@@ -6,7 +6,12 @@
 #include "Vec2D.h"
 
 #include <vector>
+#include <iostream>
+
 using std::vector;
+using std::cout;
+using std::endl;
+
 
 void testNames() {
 	Dweller *d = new Dweller("Pip-Boy", 2222222);
@@ -80,5 +85,16 @@ void shouldNotCompile() {
 }
 
 void main() {
+
 	testNames();
+	shouldNotCompile();
+
+	Dweller d("One", 5555555);
+	Outfit o("Outfit", 0, 1234567);
+	cout << "Nothing should appear above" << endl;
+	cout << d.getSPECIAL() << endl;
+	d.assignOutfit(&o);
+	cout << d.getSPECIAL() << endl;
+
+
 }
