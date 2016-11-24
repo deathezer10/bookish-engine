@@ -6,9 +6,15 @@ Outfit::Outfit(const string& outfitName, const int& durability, const int& speci
 };
 
 const int Outfit::getSPECIAL() {
-
+	if (getDurability() <= 0)
+		return 0;
+	else
+		return kSPECIAL;
 }
 
-void  Outfit::receiveDamage(const int&) {
+void Outfit::receiveDamage(const int& damage) {
+	durability_ -= damage;
+}
 
+Outfit::~Outfit() {
 }

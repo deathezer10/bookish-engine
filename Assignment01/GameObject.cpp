@@ -1,14 +1,12 @@
 #include "GameObject.h"
 
 
+int GameObject::count = 0; // first-time initialization
+
+
 
 GameObject::GameObject(const string& objName) : kName(objName) {
-	count = 0; // first static initialization
 	count++;
-}
-
-GameObject::~GameObject() {
-	count--;
 }
 
 int GameObject::getCount() {
@@ -17,4 +15,8 @@ int GameObject::getCount() {
 
 string GameObject::getName() {
 	return kName;
+}
+
+GameObject::~GameObject() {
+	count--;
 }

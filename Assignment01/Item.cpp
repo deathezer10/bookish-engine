@@ -6,3 +6,6 @@ Item::Item(const string& itemName, const int& durability) : GameObject(itemName)
 const int Item::getDurability() {
 	return durability_;
 }
+
+Item::~Item() {
+}

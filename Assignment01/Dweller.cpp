@@ -25,7 +25,10 @@ const int Dweller::getCurrentRadDamage() {
 }
 
 const int Dweller::getAttackDmg() {
-	return weapon_->getAttackDmg();
+	if (weapon_ == NULL)
+		return 0;
+	else
+		return weapon_->getAttackDmg();
 }
 
 const Vec2D Dweller::getPosition() {
@@ -61,8 +64,11 @@ void Dweller::receiveRadDamage(const int& damage) {
 }
 
 void Dweller::receiveEquipmentDamage(const int& damage) {
-	outfit_->receiveDamage(damage);
-	weapon_->receiveDamage(damage);
+	if (weapon_ != NULL) 
+		weapon_->receiveDamage(damage);
+	
+	if (outfit_ != NULL) 
+		outfit_->receiveDamage(damage);
 }
 
 void Dweller::addStimpak(const int& count) {

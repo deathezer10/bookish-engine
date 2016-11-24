@@ -78,3 +78,7 @@ void shouldNotCompile() {
 
 #endif
 }
+
+void main() {
+	testNames();
+}
