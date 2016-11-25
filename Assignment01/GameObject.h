@@ -8,7 +8,7 @@ class GameObject {
 
 
 public:
-	~GameObject();
+	virtual ~GameObject(); // Virtual to allow derived classes to have proper deletion of memory
 	string getName();
 	static int getCount();
 
