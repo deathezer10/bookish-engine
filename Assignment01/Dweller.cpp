@@ -86,6 +86,8 @@ void Dweller::receiveRadDamage(const int& damage) {
 
 	if (radiation_ > 100)
 		radiation_ = 100;
+
+	receiveHealthDamage(0); // Re-Clamp the Dweller's Health
 }
 
 void Dweller::receiveEquipmentDamage(const int& damage) {

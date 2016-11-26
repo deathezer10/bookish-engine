@@ -65,8 +65,5 @@
     <ClCompile Include="Dweller.cpp">
       <Filter>Source Files\Monster</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
