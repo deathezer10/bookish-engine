@@ -13,7 +13,7 @@ const int Weapon::getAttackDmg() {
 }
 
 void Weapon::receiveDamage(const int& damage) {
-	durability_ -= damage;
+	durability_ -= (damage / 2); // Half the damage intake
 }
 
 Weapon::~Weapon() {
