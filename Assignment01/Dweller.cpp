@@ -51,7 +51,7 @@ const int Dweller::getCurrentRadDamage() {
 
 const int Dweller::getAttackDmg() {
 	if (weapon_ == NULL)
-		return 0;
+		return 1; // 1 damage if the Dweller has no weapon
 	else
 		return weapon_->getAttackDmg();
 }
@@ -84,8 +84,6 @@ void Dweller::receiveRadDamage(const int& damage) {
 
 	if (radiation_ > 100)
 		radiation_ = 100;
-
-	receiveHealthDamage(0); // Clamp the health with new rad damage
 }
 
 void Dweller::receiveEquipmentDamage(const int& damage) {

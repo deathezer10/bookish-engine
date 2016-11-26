@@ -1,4 +1,5 @@
-#pragma once
+#ifndef DWELLER_H
+#define DWELLER_H
 
 
 #include "GameObject.h"
@@ -53,3 +54,4 @@ protected:
 
 };
 
+#endif

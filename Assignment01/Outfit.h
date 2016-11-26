@@ -1,4 +1,5 @@
-#pragma once
+#ifndef OUTFIT_H
+#define OUTFIT_H
 
 
 #include "Item.h"
@@ -16,3 +17,5 @@ protected:
 	const int kSPECIAL;
 
 };
+
+#endif

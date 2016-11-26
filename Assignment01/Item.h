@@ -1,4 +1,6 @@
-#pragma once
+#ifndef ITEM_H
+#define ITEM_H
+
 
 #include "GameObject.h"
 
@@ -16,3 +18,5 @@ protected:
 	int durability_;
 
 };
+
+#endif

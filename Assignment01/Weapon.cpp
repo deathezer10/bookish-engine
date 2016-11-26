@@ -7,7 +7,7 @@ Weapon::Weapon(const string& weaponName, const int& durability, const int& weapo
 
 const int Weapon::getAttackDmg() {
 	if (getDurability() <= 0)
-		return 0;
+		return 1;
 	else
 		return kAttackDmg;
 }

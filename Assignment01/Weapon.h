@@ -1,4 +1,5 @@
-#pragma once
+#ifndef WEAPON_H
+#define WEAPON_H
 
 
 #include "Item.h"
@@ -20,3 +21,5 @@ protected:
 
 
 };
+
+#endif
