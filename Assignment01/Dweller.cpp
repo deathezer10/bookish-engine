@@ -1,7 +1,12 @@
 #include "Dweller.h"
 
+using std::to_string;
+using std::stoi;
 
 Dweller::Dweller(const string& name, const int& special) : GameObject(name) {
+	if ((special > 9999999 || special < 1000000) && special != 0) // Must have only 7 digits or just Zero
+		throw std::out_of_range("Invalid special specified in Dweller");
+
 	setPosition(Vec2D(0, 0));
 	SPECIAL_ = special;
 	health_ = 100;
@@ -13,7 +18,27 @@ Dweller::Dweller(const string& name, const int& special) : GameObject(name) {
 }
 
 const int Dweller::getSPECIAL() {
-	return SPECIAL_;
+	if (SPECIAL_ == 0)
+		return ((outfit_ == NULL) ? 0 : outfit_->getSPECIAL());
+
+	if (outfit_ == NULL)
+		return SPECIAL_;
+
+	string dwellerStr = to_string(SPECIAL_);
+	string outfitStr = (outfit_->getDurability() == 0) ? "0000000" : to_string(outfit_->getSPECIAL()); // check if durability is 0
+	string outputStr = "0000000";
+
+	for (unsigned i = 0; i < outputStr.length(); i++) {
+		int sum = ((dwellerStr[i] - '0') + (outfitStr[i] - '0'));
+
+		// Prevent over 9
+		if (sum > 9)
+			sum = 9;
+
+		outputStr[i] = sum + '0';
+	}
+
+	return stoi(outputStr);
 }
 
 const int Dweller::getCurrentHealth() {
@@ -64,10 +89,10 @@ void Dweller::receiveRadDamage(const int& damage) {
 }
 
 void Dweller::receiveEquipmentDamage(const int& damage) {
-	if (weapon_ != NULL) 
+	if (weapon_ != NULL)
 		weapon_->receiveDamage(damage);
-	
-	if (outfit_ != NULL) 
+
+	if (outfit_ != NULL)
 		outfit_->receiveDamage(damage);
 }
 

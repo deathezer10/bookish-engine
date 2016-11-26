@@ -12,7 +12,7 @@ class Dweller : public GameObject {
 
 
 public:
-	Dweller(const string&, const int&);
+	Dweller(const string& name, const int& special);
 	~Dweller();
 
 	const int getSPECIAL();
