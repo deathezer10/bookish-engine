@@ -90,7 +90,7 @@ void main() {
 	shouldNotCompile();
 
 	Dweller d("One", 5555555);
-	Outfit o("Outfit", 0, 1443440);
+	Outfit o("Outfit", 1, 1443440);
 	cout << "Nothing should appear above" << endl;
 	cout << "Pre: " << d.getSPECIAL() << endl;
 	d.assignOutfit(&o);

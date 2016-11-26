@@ -22,20 +22,20 @@ public:
 	const int getAttackDmg();
 
 	const Vec2D getPosition();
-	void setPosition(const Vec2D&);
+	void setPosition(const Vec2D& pos);
 
-	void receiveHealthDamage(const int&);
-	void receiveRadDamage(const int&);
-	void receiveEquipmentDamage(const int&);
+	void receiveHealthDamage(const int& damage);
+	void receiveRadDamage(const int& damage);
+	void receiveEquipmentDamage(const int& damage);
 
-	void addStimpak(const int&);
-	void addRadAway(const int&);
+	void addStimpak(const int& count);
+	void addRadAway(const int& count);
 
 	void useStimpak();
 	void useRadAway();
 
-	Outfit* assignOutfit(Outfit*);
-	Weapon* assignWeapon(Weapon*);
+	Outfit* assignOutfit(Outfit* outfit);
+	Weapon* assignWeapon(Weapon* weapon);
 
 	bool isDead();
 

@@ -15,7 +15,7 @@ public:
 	static int getCount();
 
 protected:
-	GameObject(const string&);
+	GameObject(const string& objName);
 	const string kName;
 
 

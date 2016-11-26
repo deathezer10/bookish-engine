@@ -28,6 +28,7 @@ const int Dweller::getSPECIAL() {
 	string outfitStr = (outfit_->getDurability() == 0) ? "0000000" : to_string(outfit_->getSPECIAL()); // check if durability is 0
 	string outputStr = "0000000";
 
+	// Iterate every characters in the string and sum them up to an output string
 	for (unsigned i = 0; i < outputStr.length(); i++) {
 		int sum = ((dwellerStr[i] - '0') + (outfitStr[i] - '0'));
 
@@ -79,6 +80,7 @@ void Dweller::receiveHealthDamage(const int& damage) {
 void Dweller::receiveRadDamage(const int& damage) {
 	radiation_ += damage;
 
+	// Clamp the value
 	if (radiation_ < 0)
 		radiation_ = 0;
 
@@ -103,6 +105,7 @@ void Dweller::addRadAway(const int& count) {
 }
 
 void Dweller::useStimpak() {
+	// Only consume if it has an effect on the Dweller
 	if (stimpak_ > 0 && health_ > 0 && health_ < 100) {
 		stimpak_--;
 		receiveHealthDamage(-20);
@@ -110,6 +113,7 @@ void Dweller::useStimpak() {
 }
 
 void Dweller::useRadAway() {
+	// Only consume if it has an effect on the Dweller
 	if (radaway_ > 0 && radiation_ > 0) {
 		radaway_--;
 		receiveRadDamage(-10);
