@@ -1,3 +1,4 @@
 # bookish-engine
 
-Hello world
+## Synopsis
+HS's Data Structure & Algorithm Assignment 01
