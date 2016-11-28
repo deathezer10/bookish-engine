@@ -91,10 +91,13 @@ void main() {
 
 	Dweller d("One", 5555555);
 	Outfit o("Outfit", 1, 1443440);
+	Weapon w("Excalibur", 1, -2); // negative damage
 	cout << "Nothing should appear above" << endl;
-	cout << "Pre: " << d.getSPECIAL() << endl;
+	cout << "Dweller's Special: " << d.getSPECIAL() << endl;
 	d.assignOutfit(&o);
-	cout << "Post: " << d.getSPECIAL() << endl;
+	cout << "Dweller's with Outfit Special: " << d.getSPECIAL() << endl;
+	d.assignWeapon(&w);
+	cout << "Weapon Damage: " << d.getAttackDmg() << endl;
 
 
 }

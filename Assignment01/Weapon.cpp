@@ -1,7 +1,9 @@
 #include "Weapon.h"
 
 
-Weapon::Weapon(const string& weaponName, const int& durability, const int& weaponDamage) : Item(weaponName, durability), kAttackDmg(weaponDamage) {
+Weapon::Weapon(const string& weaponName, const int& durability, const int& weaponDamage) : 
+Item(weaponName, durability), 
+kAttackDmg((weaponDamage < 0) ? 0 : weaponDamage) {
 }
 
 
